@@ -4,6 +4,9 @@
  * and open the template in the editor.
  */
 package iniciodesesion;
+import java.awt.Color;
+import java.util.Date;
+import java.text.SimpleDateFormat;
 
 /**
  *
@@ -16,6 +19,7 @@ public class frame2 extends javax.swing.JFrame {
      */
     public frame2() {
         initComponents();
+        Label_fecha.setText(lafecha());
     }
 
     /**
@@ -28,29 +32,324 @@ public class frame2 extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
+        jPanel4 = new javax.swing.JPanel();
+        label_accion = new javax.swing.JLabel();
+        jPanel5 = new javax.swing.JPanel();
+        label_terror = new javax.swing.JLabel();
+        jPanel6 = new javax.swing.JPanel();
+        label_infanitl = new javax.swing.JLabel();
+        jPanel7 = new javax.swing.JPanel();
+        label_comedia = new javax.swing.JLabel();
+        jPanel8 = new javax.swing.JPanel();
+        label_drama = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        Label_fecha = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 800, Short.MAX_VALUE)
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel2.setBackground(new java.awt.Color(204, 0, 0));
+        jPanel2.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+
+        jLabel1.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
+        jLabel1.setText("FilmNet");
+
+        jSeparator1.setBackground(new java.awt.Color(0, 0, 0));
+        jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
+
+        jPanel4.setBackground(new java.awt.Color(255, 0, 51));
+
+        label_accion.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        label_accion.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        label_accion.setText("Peliculas de accion");
+        label_accion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        label_accion.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                label_accionMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                label_accionMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                label_accionMouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(label_accion, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 500, Short.MAX_VALUE)
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(label_accion, javax.swing.GroupLayout.DEFAULT_SIZE, 65, Short.MAX_VALUE)
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 500));
+        jPanel5.setBackground(new java.awt.Color(255, 0, 0));
+
+        label_terror.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        label_terror.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        label_terror.setText("Peliculas de terror");
+        label_terror.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        label_terror.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                label_terrorMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(label_terror, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(label_terror, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE)
+        );
+
+        jPanel6.setBackground(new java.awt.Color(255, 0, 51));
+
+        label_infanitl.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        label_infanitl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        label_infanitl.setText("Peliculas infantiles");
+        label_infanitl.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        label_infanitl.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                label_infanitlMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(label_infanitl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(label_infanitl, javax.swing.GroupLayout.DEFAULT_SIZE, 65, Short.MAX_VALUE)
+        );
+
+        jPanel7.setBackground(new java.awt.Color(255, 0, 0));
+
+        label_comedia.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        label_comedia.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        label_comedia.setText("Peliculas de comedia");
+        label_comedia.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        label_comedia.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                label_comediaMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
+        jPanel7.setLayout(jPanel7Layout);
+        jPanel7Layout.setHorizontalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(label_comedia, javax.swing.GroupLayout.DEFAULT_SIZE, 277, Short.MAX_VALUE)
+        );
+        jPanel7Layout.setVerticalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(label_comedia, javax.swing.GroupLayout.DEFAULT_SIZE, 82, Short.MAX_VALUE)
+        );
+
+        jPanel8.setBackground(new java.awt.Color(255, 51, 51));
+
+        label_drama.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        label_drama.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        label_drama.setText("Peliculas de drama");
+        label_drama.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        label_drama.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                label_dramaMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
+        jPanel8.setLayout(jPanel8Layout);
+        jPanel8Layout.setHorizontalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(label_drama, javax.swing.GroupLayout.DEFAULT_SIZE, 279, Short.MAX_VALUE)
+        );
+        jPanel8Layout.setVerticalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(label_drama, javax.swing.GroupLayout.DEFAULT_SIZE, 68, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 1, Short.MAX_VALUE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(94, 94, 94)
+                .addComponent(jLabel1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jSeparator1)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(47, Short.MAX_VALUE))
+        );
+
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 280, 550));
+
+        jPanel3.setBackground(new java.awt.Color(204, 0, 0));
+
+        jLabel3.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        jLabel3.setText("Fecha: ");
+
+        Label_fecha.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        Label_fecha.setText("DD/MM/YYYY");
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(28, 28, 28)
+                .addComponent(jLabel3)
+                .addGap(47, 47, 47)
+                .addComponent(Label_fecha)
+                .addContainerGap(363, Short.MAX_VALUE))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(40, 40, 40)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(Label_fecha))
+                .addContainerGap(46, Short.MAX_VALUE))
+        );
+
+        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 50, 610, -1));
+
+        jLabel2.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
+        jLabel2.setText("¡¡Bienvenidos a el proyecto!!");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 10, -1, 40));
+
+        jLabel4.setFont(new java.awt.Font("Roboto", 1, 12)); // NOI18N
+        jLabel4.setText("Bienvenido al proyecto de java diseñado y creado por Juan Mendez y Carlo Marcello, este fue ");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 170, -1, -1));
+
+        jLabel5.setFont(new java.awt.Font("Roboto", 1, 12)); // NOI18N
+        jLabel5.setText("diseñado con el proposito que el usuario pase un dia de entretenimiento, y que mejor con ");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 190, -1, -1));
+
+        jLabel6.setFont(new java.awt.Font("Roboto", 1, 12)); // NOI18N
+        jLabel6.setText("el mejor proyecto en Java que te ofrece un gran cantidad de la mejor calidad de peliculas ");
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 210, -1, -1));
+
+        jLabel7.setFont(new java.awt.Font("Roboto", 1, 12)); // NOI18N
+        jLabel7.setText("que han existido. Como siempre esperemos que disfrute del contenido");
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 230, -1, -1));
+
+        jLabel8.setFont(new java.awt.Font("Roboto", 1, 12)); // NOI18N
+        jLabel8.setText("Atentamente: el equipo desarrollador.");
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 270, 210, 20));
+
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/imagen20.png"))); // NOI18N
+        jLabel9.setText("jLabel9");
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 260, 310, 270));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, 540));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void label_accionMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_label_accionMouseEntered
+        // TODO add your handling code here:
+        label_accion.setBackground(Color.red);
+    }//GEN-LAST:event_label_accionMouseEntered
+
+    private void label_accionMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_label_accionMouseExited
+        // TODO add your handling code here:
+        label_accion.setBackground(Color.white);
+    }//GEN-LAST:event_label_accionMouseExited
+
+    private void label_accionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_label_accionMouseClicked
+        // TODO add your handling code here: aqui se abrira el frame que tendra las peliculas de accion.
+        frame_accion a = new frame_accion();
+        a.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_label_accionMouseClicked
+
+    private void label_terrorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_label_terrorMouseClicked
+        // TODO add your handling code here: aqui se abrira el frame de las peliculas de terror
+        frame_terror b = new frame_terror();
+        b.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_label_terrorMouseClicked
+
+    private void label_infanitlMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_label_infanitlMouseClicked
+        // TODO add your handling code here:
+        frame_infantil c = new frame_infantil();
+        c.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_label_infanitlMouseClicked
+
+    private void label_comediaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_label_comediaMouseClicked
+        // TODO add your handling code here:
+        frame_comedia d = new frame_comedia();
+        d.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_label_comediaMouseClicked
+
+    private void label_dramaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_label_dramaMouseClicked
+        // TODO add your handling code here:
+        frame_drama a = new frame_drama();
+        a.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_label_dramaMouseClicked
+
     /**
      * @param args the command line arguments
      */
+    public  String lafecha(){
+        Date fecha = new Date();
+        SimpleDateFormat fechat = new SimpleDateFormat("dd/MM/YYYY");
+        return fechat.format(fecha);
+    }
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -84,6 +383,29 @@ public class frame2 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Label_fecha;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JLabel label_accion;
+    private javax.swing.JLabel label_comedia;
+    private javax.swing.JLabel label_drama;
+    private javax.swing.JLabel label_infanitl;
+    private javax.swing.JLabel label_terror;
     // End of variables declaration//GEN-END:variables
 }

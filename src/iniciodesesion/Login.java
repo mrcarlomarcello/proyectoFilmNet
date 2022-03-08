@@ -10,7 +10,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Juan Carlos Mendez y Carlo Marcello Menjivar
+ * @author Juan Carlos Mendez
  */
 public class Login extends javax.swing.JFrame {
 
