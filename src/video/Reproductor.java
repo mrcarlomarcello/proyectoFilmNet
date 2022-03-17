@@ -4,6 +4,7 @@ package video;
 
 import java.awt.BorderLayout;
 import java.io.File;
+//Esta libreria no se necesita, ni idea de porqué estaba aquí.... (EDITAR!!!)
 //import javafx.embed.swing;
 import javafx.embed.swing.JFXPanel;
 import javafx.scene.Group;
@@ -15,10 +16,7 @@ import javafx.scene.media.MediaView;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
-/**
- *
- * @author El código de Adrian
- */
+
 public class Reproductor {
     
     //Creamos los objetos y variables a utilizar

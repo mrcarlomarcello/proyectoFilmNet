@@ -1,5 +1,6 @@
 
 package iniciodesesion;
+import video.*;
 
 public class frame_accion extends javax.swing.JFrame {
     
@@ -272,10 +273,14 @@ public class frame_accion extends javax.swing.JFrame {
 
     private void movie00MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_movie00MouseClicked
         // TODO add your handling code here:
-        frameMovieDisplay movieDisplay = new frameMovieDisplay();
+        //frameMovieDisplay movieDisplay = new frameMovieDisplay();
+        
+        // MI NUEVO FRAME DE VIDEO FALTA EDITAR!!!!!!!
+        FrameReproductor fp = new FrameReproductor();
         //pasamos el ID de la movie
-        movieDisplay.setMovieID(0);
-        movieDisplay.setVisible(true);
+        fp.setVisible(true);
+        //movieDisplay.setMovieID(0);
+        //movieDisplay.setVisible(true);
         this.setVisible(false);        
     }//GEN-LAST:event_movie00MouseClicked
 

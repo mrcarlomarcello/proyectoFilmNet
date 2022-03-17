@@ -3,10 +3,7 @@ package video;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author Adrian
- */
+
 public class FrameReproductor extends javax.swing.JFrame {
 
     //Creamos un objeto de la clase Reproductor
