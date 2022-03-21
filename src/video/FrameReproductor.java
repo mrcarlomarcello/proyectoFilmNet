@@ -1,5 +1,6 @@
 package video;
 
+import iniciodesesion.frame2;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 
@@ -44,6 +45,8 @@ public class FrameReproductor extends javax.swing.JFrame {
         title = new javax.swing.JLabel();
         volume = new javax.swing.JSlider();
         jSeparator1 = new javax.swing.JSeparator();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -51,14 +54,16 @@ public class FrameReproductor extends javax.swing.JFrame {
         panel.setLayout(panelLayout);
         panelLayout.setHorizontalGroup(
             panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 854, Short.MAX_VALUE)
         );
         panelLayout.setVerticalGroup(
             panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 480, Short.MAX_VALUE)
         );
 
-        open.setFont(new java.awt.Font("Monospaced", 0, 14)); // NOI18N
+        jPanel2.setBackground(new java.awt.Color(204, 0, 0));
+
+        open.setFont(new java.awt.Font("Roboto", 3, 18)); // NOI18N
         open.setText("Open");
         open.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -66,24 +71,29 @@ public class FrameReproductor extends javax.swing.JFrame {
             }
         });
 
-        play.setFont(new java.awt.Font("Monospaced", 0, 14)); // NOI18N
+        play.setFont(new java.awt.Font("Roboto", 3, 18)); // NOI18N
         play.setText("Play");
+        play.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         play.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 playActionPerformed(evt);
             }
         });
 
-        pause.setFont(new java.awt.Font("Monospaced", 0, 14)); // NOI18N
+        pause.setBackground(new java.awt.Color(255, 0, 0));
+        pause.setFont(new java.awt.Font("Roboto", 3, 18)); // NOI18N
         pause.setText("Pause");
+        pause.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         pause.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 pauseActionPerformed(evt);
             }
         });
 
-        stop.setFont(new java.awt.Font("Monospaced", 0, 14)); // NOI18N
+        stop.setBackground(new java.awt.Color(255, 0, 0));
+        stop.setFont(new java.awt.Font("Roboto", 3, 18)); // NOI18N
         stop.setText("Stop");
+        stop.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         stop.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 stopActionPerformed(evt);
@@ -94,6 +104,7 @@ public class FrameReproductor extends javax.swing.JFrame {
         title.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         title.setText("Titulo");
 
+        volume.setBackground(new java.awt.Color(153, 153, 153));
         volume.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 volumeStateChanged(evt);
@@ -101,6 +112,29 @@ public class FrameReproductor extends javax.swing.JFrame {
         });
 
         jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
+
+        jPanel1.setBackground(new java.awt.Color(255, 0, 0));
+
+        jLabel1.setFont(new java.awt.Font("Roboto", 3, 18)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Regresar");
+        jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel1MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
+        );
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -119,8 +153,10 @@ public class FrameReproductor extends javax.swing.JFrame {
                 .addComponent(stop)
                 .addGap(18, 18, 18)
                 .addComponent(volume, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(title, javax.swing.GroupLayout.DEFAULT_SIZE, 245, Short.MAX_VALUE)
+                .addComponent(title, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
@@ -128,6 +164,7 @@ public class FrameReproductor extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(play)
@@ -135,7 +172,7 @@ public class FrameReproductor extends javax.swing.JFrame {
                             .addComponent(stop))
                         .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(open)
-                        .addComponent(volume, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(volume, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(title))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -195,7 +232,16 @@ public class FrameReproductor extends javax.swing.JFrame {
         this.reproductor.setVolumen((double)this.volume.getValue()/100);
     }//GEN-LAST:event_volumeStateChanged
 
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+        // TODO add your handling code here:
+        frame2 a = new frame2();
+        a.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jLabel1MouseClicked
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JButton open;

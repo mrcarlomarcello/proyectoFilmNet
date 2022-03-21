@@ -32,6 +32,8 @@ public class frame_accion extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         jPanel8 = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
+        jPanel9 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -58,6 +60,12 @@ public class frame_accion extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(204, 0, 0));
 
         movie00.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/scarface-movie-i8166_ccexpress.jpeg"))); // NOI18N
+        movie00.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        movie00.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                movie00MouseDragged(evt);
+            }
+        });
         movie00.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 movie00MouseClicked(evt);
@@ -88,6 +96,7 @@ public class frame_accion extends javax.swing.JFrame {
         jPanel4.setBackground(new java.awt.Color(204, 0, 0));
 
         movie01.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/descarga_ccexpress.jpeg"))); // NOI18N
+        movie01.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         movie01.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 movie01MouseClicked(evt);
@@ -122,6 +131,7 @@ public class frame_accion extends javax.swing.JFrame {
         jPanel5.setBackground(new java.awt.Color(204, 0, 0));
 
         movie02.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Spider_Man_2-876729560-large_ccexpress.jpeg"))); // NOI18N
+        movie02.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         movie02.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 movie02MouseClicked(evt);
@@ -200,6 +210,29 @@ public class frame_accion extends javax.swing.JFrame {
             .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
+        jPanel9.setBackground(new java.awt.Color(255, 0, 0));
+
+        jLabel2.setFont(new java.awt.Font("Roboto", 3, 18)); // NOI18N
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("Regresar");
+        jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel2MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
+        jPanel9.setLayout(jPanel9Layout);
+        jPanel9Layout.setHorizontalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 114, Short.MAX_VALUE)
+        );
+        jPanel9Layout.setVerticalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 52, Short.MAX_VALUE)
+        );
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -237,7 +270,11 @@ public class frame_accion extends javax.swing.JFrame {
                         .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(98, 98, 98)
                         .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(324, Short.MAX_VALUE))
+                .addContainerGap(64, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(208, 208, 208))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -263,10 +300,12 @@ public class frame_accion extends javax.swing.JFrame {
                     .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(70, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
+                .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 970, 500));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 710, 500));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -301,6 +340,17 @@ public class frame_accion extends javax.swing.JFrame {
         movieDisplay.setVisible(true);        
         this.setVisible(false);
     }//GEN-LAST:event_movie02MouseClicked
+
+    private void movie00MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_movie00MouseDragged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_movie00MouseDragged
+
+    private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
+        // TODO add your handling code here:
+        frame2 a = new frame2();
+        a.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jLabel2MouseClicked
 
    
     public static void main(String args[]) {
@@ -339,6 +389,7 @@ public class frame_accion extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -352,6 +403,7 @@ public class frame_accion extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
     private javax.swing.JLabel movie00;
     private javax.swing.JLabel movie01;
     private javax.swing.JLabel movie02;

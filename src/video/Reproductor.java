@@ -20,7 +20,7 @@ import javax.swing.JPanel;
 public class Reproductor {
     
     //Creamos los objetos y variables a utilizar
-    private JFXPanel jfxPanel;
+    private final JFXPanel jfxPanel;
     private JPanel jpanel;
     private MediaPlayer mediaPlayer;
     private Media media;
