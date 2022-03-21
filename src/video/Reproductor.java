@@ -42,6 +42,11 @@ public class Reproductor {
         this.ruta = ruta;
     }
     
+    //agregue este get
+    public String getRuta(){
+        return this.ruta;
+    }
+    
     //Método para agregar el panel donde se visualizara el video
     /**
      * @param jpanel the jpanel to set

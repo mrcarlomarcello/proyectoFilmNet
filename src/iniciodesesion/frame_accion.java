@@ -325,20 +325,24 @@ public class frame_accion extends javax.swing.JFrame {
 
     private void movie01MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_movie01MouseClicked
         // TODO add your handling code here:
-        frameMovieDisplay movieDisplay = new frameMovieDisplay();
+        // MI NUEVO FRAME DE VIDEO FALTA EDITAR!!!!!!!
+        FrameReproductor fp = new FrameReproductor();
         //pasamos el ID de la movie
-        movieDisplay.setMovieID(1);
-        movieDisplay.setVisible(true);
-        this.setVisible(false);        
+        fp.setVisible(true);
+        //movieDisplay.setMovieID(0);
+        //movieDisplay.setVisible(true);
+        this.setVisible(false);          
     }//GEN-LAST:event_movie01MouseClicked
 
     private void movie02MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_movie02MouseClicked
         // TODO add your handling code here:
-        frameMovieDisplay movieDisplay = new frameMovieDisplay();
-        //Pasamos el ID de la movie
-        movieDisplay.setMovieID(2);
-        movieDisplay.setVisible(true);        
-        this.setVisible(false);
+        // MI NUEVO FRAME DE VIDEO FALTA EDITAR!!!!!!!
+        FrameReproductor fp = new FrameReproductor();
+        //pasamos el ID de la movie
+        fp.setVisible(true);
+        //movieDisplay.setMovieID(0);
+        //movieDisplay.setVisible(true);
+        this.setVisible(false);  
     }//GEN-LAST:event_movie02MouseClicked
 
     private void movie00MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_movie00MouseDragged

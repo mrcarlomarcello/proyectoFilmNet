@@ -5,6 +5,8 @@
  */
 package iniciodesesion;
 
+import video.FrameReproductor;
+
 /**
  *
  * @author Juan Carlos Mendez
@@ -94,6 +96,11 @@ public class frame_terror extends javax.swing.JFrame {
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/ne.jpeg"))); // NOI18N
         jLabel8.setText("jLabel8");
         jLabel8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel8MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -124,6 +131,11 @@ public class frame_terror extends javax.swing.JFrame {
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/a20533e44206f047b96fbca012a2a769_ccexpress.jpeg"))); // NOI18N
         jLabel7.setText("jLabel7");
         jLabel7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel7MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -177,7 +189,12 @@ public class frame_terror extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
-        // TODO add your handling code here:
+        FrameReproductor fp = new FrameReproductor();
+        //pasamos el ID de la movie
+        fp.setVisible(true);
+        //movieDisplay.setMovieID(0);
+        //movieDisplay.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jLabel4MouseClicked
 
     private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
@@ -186,6 +203,24 @@ public class frame_terror extends javax.swing.JFrame {
         a.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jLabel9MouseClicked
+
+    private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
+        FrameReproductor fp = new FrameReproductor();
+        //pasamos el ID de la movie
+        fp.setVisible(true);
+        //movieDisplay.setMovieID(0);
+        //movieDisplay.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jLabel8MouseClicked
+
+    private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
+        FrameReproductor fp = new FrameReproductor();
+        //pasamos el ID de la movie
+        fp.setVisible(true);
+        //movieDisplay.setMovieID(0);
+        //movieDisplay.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jLabel7MouseClicked
 
     /**
      * @param args the command line arguments

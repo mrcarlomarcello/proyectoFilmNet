@@ -11,12 +11,13 @@ public class FrameReproductor extends javax.swing.JFrame {
     Reproductor reproductor;
     //Creamos la variable de tipo String para almacenar la ruta del video
     
+    
     public FrameReproductor() {
         initComponents();
         //Colocamos el Frame en el centro
         this.setLocationRelativeTo(null);
         //Intanciamos el objeto de la clase Reproductor
-        this.reproductor = new Reproductor();
+        this.reproductor = new Reproductor();          
     }
 
     /**
@@ -202,6 +203,7 @@ public class FrameReproductor extends javax.swing.JFrame {
                 this.reproductor.parar();
                        
             String ruta = obtenerVideo();
+            
             if (!ruta.isEmpty()) {                            
                 String nombre = ruta.split("/")[ruta.split("/").length-1];                
                 this.title.setText(nombre);
@@ -211,6 +213,8 @@ public class FrameReproductor extends javax.swing.JFrame {
                 this.reproductor.mostrarVideo();
                 this.reproductor.reproducir();
             }
+            System.out.println(this.reproductor.getRuta());
+            
         } catch (NullPointerException e) {
             JOptionPane.showMessageDialog(null, "No selecciono un video para reproducir.");
         }
